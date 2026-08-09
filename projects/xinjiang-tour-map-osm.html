@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新疆南疆旅游路线地图</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  body { margin:0; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+  #map { width:100vw; height:100vh; }
+  #legend { position:absolute; z-index:1000; bottom:24px; left:12px; background:rgba(255,255,255,.94);
+             padding:12px 14px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.18);
+             font-size:13px; line-height:1.5; max-width:230px; }
+  #legend h3 { margin:0 0 8px; font-size:14px; }
+  #hint { position:absolute; z-index:1000; top:12px; left:50%; transform:translateX(-50%);
+           background:rgba(0,0,0,.72); color:#fff; padding:8px 16px; border-radius:20px; font-size:13px; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="hint">点击圆点查看景点 · 虚线为示意线路</div>
+<div id="legend">
+  <h3>🗺️ 南疆旅游路线</h3>
+  <div style="display:flex;align-items:center;margin:3px 0;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#e74c3c;margin-right:8px;"></span>城市/喀什人文 (8处)</div>
+<div style="display:flex;align-items:center;margin:3px 0;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#2980b9;margin-right:8px;"></span>帕米尔高原线 (9处)</div>
+<div style="display:flex;align-items:center;margin:3px 0;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#27ae60;margin-right:8px;"></span>塔县小环线 (2处)</div>
+<div style="display:flex;align-items:center;margin:3px 0;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#f39c12;margin-right:8px;"></span>沙漠公路 (1处)</div>
+  <div style="margin-top:8px;border-top:1px solid #ddd;padding-top:6px;color:#666;">
+    虚线 = 示意线路（帕米尔线 / 塔县小环线 / 城市环线）
+  </div>
+</div>
+<script>
+  var map = L.map('map').setView([38.9, 77.5], 7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors', maxZoom: 18
+  }).addTo(map);
+  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    attribution: 'Topo', maxZoom: 17
+  }).addTo(map);
+  L.polyline([[39.4720554, 75.9876279], [39.0028226, 74.4323386], [38.7202581, 74.9863388], [38.4453187, 75.0563419], [38.2749231, 74.9173162], [37.7720982, 75.2298859], [36.8500993, 75.4283363], [37.2205395, 75.4040117]], {color: "#888", weight: 2, dashArray: "6 4", opacity: 0.6}).addTo(map).bindPopup("帕米尔高原线");
+L.polyline([[37.7720982, 75.2298859], [37.6298372, 75.5515545], [37.8329336, 75.5270359]], {color: "#888", weight: 2, dashArray: "6 4", opacity: 0.6}).addTo(map).bindPopup("塔县小环线");
+L.polyline([[39.4720554, 75.9876279], [38.3446426, 77.033982], [37.1110359, 79.920893], [38.8266112, 80.59898595000001], [40.5421865, 81.2770789], [41.5820683, 80.6515452], [41.1686701, 80.2581875]], {color: "#888", weight: 2, dashArray: "6 4", opacity: 0.6}).addTo(map).bindPopup("南疆城市环线");
+  L.circleMarker([39.4720554, 75.9876279], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>喀什古城</b><br><small>喀什古城, 尤木拉克协海尔路, 亚瓦格街道, 吾斯塘博依街道, 加拉买里斯村, 喀什市, 喀什地区, 新疆维吾尔自治区, 844000, 中国</small>");
+L.circleMarker([39.488429, 76.0240585], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>香妃园</b><br><small>香妃园, 浩罕乡, 喀什市, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([39.4701819, 75.9999599], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>高台民居</b><br><small>高台民居, 吐曼路, 亚瓦格街道, 东湖街道, 木桥村, 喀什市, 喀什地区, 新疆维吾尔自治区, 844000, 中国</small>");
+L.circleMarker([38.7202581, 74.9863388], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>白沙湖</b><br><small>布仑口水库, 布伦口乡, 阿克陶县, 克孜勒苏柯尔克孜自治州, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([39.0028226, 74.4323386], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>木吉火山口</b><br><small>木吉乡, 阿克陶县, 克孜勒苏柯尔克孜自治州, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([38.4453187, 75.0563419], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>喀拉库勒湖</b><br><small>喀拉库勒湖, 乌帕鲁, 布伦口乡, 阿克陶县, 克孜勒苏柯尔克孜自治州, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([38.2749231, 74.9173162], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>慕士塔格峰冰川公园</b><br><small>慕士塔格冰川公园大门, 冰川公园公路, 塔合曼乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([37.7720982, 75.2298859], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>塔什库尔干县城</b><br><small>塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([37.7822234, 75.2327838], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>石头城遗址</b><br><small>石头城遗址, 塔什库尔干县, 塔什库尔干镇, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([37.7805072, 75.2378572], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>金草滩</b><br><small>阿拉尔国家湿地公园, 瓦尔希迭村, 塔什库尔干镇, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([36.8500993, 75.4283363], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>红其拉甫口岸</b><br><small>红其拉甫达坂, تحصیل ہنزہ بالائی, 罕萨县, گلگت ڈویژن, 吉尔吉特-巴尔蒂斯坦, 巴基斯坦</small>");
+L.circleMarker([37.2205395, 75.4040117], {radius: 9, color: "#2980b9", fillColor: "#2980b9", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>瓦罕走廊观景点</b><br><small>瓦罕走廊, 科克吐鲁克公路, 达布达尔乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([37.6298372, 75.5515545], {radius: 9, color: "#27ae60", fillColor: "#27ae60", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>盘龙古道</b><br><small>盘龙古道, 昆玉孜村, 夏布喀孜拉村, 瓦恰乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([37.8329336, 75.5270359], {radius: 9, color: "#27ae60", fillColor: "#27ae60", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>班迪尔蓝湖</b><br><small>阿塔线, 班迪尔乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([41.1686701, 80.2581875], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>阿克苏市</b><br><small>阿克苏市, 阿克苏地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([41.5820683, 80.6515452], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>天山托木尔景区·温宿大峡谷</b><br><small>天山托木尔景区大峡谷, 温宿县, 阿克苏地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([40.5421865, 81.2770789], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>阿拉尔市</b><br><small>阿拉尔市, 新疆维吾尔自治区, 843300, 中国</small>");
+L.circleMarker([38.3446426, 77.033982], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>莎车县</b><br><small>莎车县, 喀什地区, 新疆维吾尔自治区, 844700, 中国</small>");
+L.circleMarker([37.1110359, 79.920893], {radius: 9, color: "#e74c3c", fillColor: "#e74c3c", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>和田市</b><br><small>和田市, 和田地区, 新疆维吾尔自治区, 中国</small>");
+L.circleMarker([38.8266112, 80.59898595000001], {radius: 9, color: "#f39c12", fillColor: "#f39c12", fillOpacity: 0.85, weight: 2}).addTo(map).bindPopup("<b>阿和沙漠公路(阿拉尔-和田)</b><br><small>阿和沙漠公路 G580 中点 (阿拉尔 40.54,81.28 -&gt; 和田 37.11,79.92)</small>");
+  // 缩放到所有标记
+  var group = L.featureGroup(L.circleMarker([39.4720554,75.9876279])
+L.circleMarker([39.488429,76.0240585])
+L.circleMarker([39.4701819,75.9999599])
+L.circleMarker([38.7202581,74.9863388])
+L.circleMarker([39.0028226,74.4323386])
+L.circleMarker([38.4453187,75.0563419])
+L.circleMarker([38.2749231,74.9173162])
+L.circleMarker([37.7720982,75.2298859])
+L.circleMarker([37.7822234,75.2327838])
+L.circleMarker([37.7805072,75.2378572])
+L.circleMarker([36.8500993,75.4283363])
+L.circleMarker([37.2205395,75.4040117])
+L.circleMarker([37.6298372,75.5515545])
+L.circleMarker([37.8329336,75.5270359])
+L.circleMarker([41.1686701,80.2581875])
+L.circleMarker([41.5820683,80.6515452])
+L.circleMarker([40.5421865,81.2770789])
+L.circleMarker([38.3446426,77.033982])
+L.circleMarker([37.1110359,79.920893])
+L.circleMarker([38.8266112,80.59898595000001]));
+  map.fitBounds(group.getBounds().pad(0.15));
+</script>
+</body>
+</html>

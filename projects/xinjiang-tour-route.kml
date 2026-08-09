@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><name>新疆南疆旅游路线景点</name>
+<Style id="pin_city"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href></Icon></IconStyle></Style>
+<Style id="pin_pamir"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href></Icon></IconStyle></Style>
+<Style id="pin_loop"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href></Icon></IconStyle></Style>
+<Style id="pin_desert"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href></Icon></IconStyle></Style>
+<Placemark><name>喀什古城</name><styleUrl>#pin_city</styleUrl><description>喀什古城, 尤木拉克协海尔路, 亚瓦格街道, 吾斯塘博依街道, 加拉买里斯村, 喀什市, 喀什地区, 新疆维吾尔自治区, 844000, 中国</description><Point><coordinates>75.9876279,39.4720554,0</coordinates></Point></Placemark>
+<Placemark><name>香妃园</name><styleUrl>#pin_city</styleUrl><description>香妃园, 浩罕乡, 喀什市, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>76.0240585,39.488429,0</coordinates></Point></Placemark>
+<Placemark><name>高台民居</name><styleUrl>#pin_city</styleUrl><description>高台民居, 吐曼路, 亚瓦格街道, 东湖街道, 木桥村, 喀什市, 喀什地区, 新疆维吾尔自治区, 844000, 中国</description><Point><coordinates>75.9999599,39.4701819,0</coordinates></Point></Placemark>
+<Placemark><name>白沙湖</name><styleUrl>#pin_pamir</styleUrl><description>布仑口水库, 布伦口乡, 阿克陶县, 克孜勒苏柯尔克孜自治州, 新疆维吾尔自治区, 中国</description><Point><coordinates>74.9863388,38.7202581,0</coordinates></Point></Placemark>
+<Placemark><name>木吉火山口</name><styleUrl>#pin_pamir</styleUrl><description>木吉乡, 阿克陶县, 克孜勒苏柯尔克孜自治州, 新疆维吾尔自治区, 中国</description><Point><coordinates>74.4323386,39.0028226,0</coordinates></Point></Placemark>
+<Placemark><name>喀拉库勒湖</name><styleUrl>#pin_pamir</styleUrl><description>喀拉库勒湖, 乌帕鲁, 布伦口乡, 阿克陶县, 克孜勒苏柯尔克孜自治州, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.0563419,38.4453187,0</coordinates></Point></Placemark>
+<Placemark><name>慕士塔格峰冰川公园</name><styleUrl>#pin_pamir</styleUrl><description>慕士塔格冰川公园大门, 冰川公园公路, 塔合曼乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>74.9173162,38.2749231,0</coordinates></Point></Placemark>
+<Placemark><name>塔什库尔干县城</name><styleUrl>#pin_pamir</styleUrl><description>塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.2298859,37.7720982,0</coordinates></Point></Placemark>
+<Placemark><name>石头城遗址</name><styleUrl>#pin_pamir</styleUrl><description>石头城遗址, 塔什库尔干县, 塔什库尔干镇, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.2327838,37.7822234,0</coordinates></Point></Placemark>
+<Placemark><name>金草滩</name><styleUrl>#pin_pamir</styleUrl><description>阿拉尔国家湿地公园, 瓦尔希迭村, 塔什库尔干镇, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.2378572,37.7805072,0</coordinates></Point></Placemark>
+<Placemark><name>红其拉甫口岸</name><styleUrl>#pin_pamir</styleUrl><description>红其拉甫达坂, تحصیل ہنزہ بالائی, 罕萨县, گلگت ڈویژن, 吉尔吉特-巴尔蒂斯坦, 巴基斯坦</description><Point><coordinates>75.4283363,36.8500993,0</coordinates></Point></Placemark>
+<Placemark><name>瓦罕走廊观景点</name><styleUrl>#pin_pamir</styleUrl><description>瓦罕走廊, 科克吐鲁克公路, 达布达尔乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.4040117,37.2205395,0</coordinates></Point></Placemark>
+<Placemark><name>盘龙古道</name><styleUrl>#pin_loop</styleUrl><description>盘龙古道, 昆玉孜村, 夏布喀孜拉村, 瓦恰乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.5515545,37.6298372,0</coordinates></Point></Placemark>
+<Placemark><name>班迪尔蓝湖</name><styleUrl>#pin_loop</styleUrl><description>阿塔线, 班迪尔乡, 塔什库尔干塔吉克自治县, 喀什地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>75.5270359,37.8329336,0</coordinates></Point></Placemark>
+<Placemark><name>阿克苏市</name><styleUrl>#pin_city</styleUrl><description>阿克苏市, 阿克苏地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>80.2581875,41.1686701,0</coordinates></Point></Placemark>
+<Placemark><name>天山托木尔景区·温宿大峡谷</name><styleUrl>#pin_city</styleUrl><description>天山托木尔景区大峡谷, 温宿县, 阿克苏地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>80.6515452,41.5820683,0</coordinates></Point></Placemark>
+<Placemark><name>阿拉尔市</name><styleUrl>#pin_city</styleUrl><description>阿拉尔市, 新疆维吾尔自治区, 843300, 中国</description><Point><coordinates>81.2770789,40.5421865,0</coordinates></Point></Placemark>
+<Placemark><name>莎车县</name><styleUrl>#pin_city</styleUrl><description>莎车县, 喀什地区, 新疆维吾尔自治区, 844700, 中国</description><Point><coordinates>77.033982,38.3446426,0</coordinates></Point></Placemark>
+<Placemark><name>和田市</name><styleUrl>#pin_city</styleUrl><description>和田市, 和田地区, 新疆维吾尔自治区, 中国</description><Point><coordinates>79.920893,37.1110359,0</coordinates></Point></Placemark>
+<Placemark><name>帕米尔高原线</name><LineString><tessellate>1</tessellate><coordinates>75.9876279,39.4720554,0 74.4323386,39.0028226,0 74.9863388,38.7202581,0 75.0563419,38.4453187,0 74.9173162,38.2749231,0 75.2298859,37.7720982,0 75.4283363,36.8500993,0 75.4040117,37.2205395,0</coordinates></LineString></Placemark>
+<Placemark><name>塔县小环线</name><LineString><tessellate>1</tessellate><coordinates>75.2298859,37.7720982,0 75.5515545,37.6298372,0 75.5270359,37.8329336,0</coordinates></LineString></Placemark>
+<Placemark><name>南疆城市环线</name><LineString><tessellate>1</tessellate><coordinates>75.9876279,39.4720554,0 77.033982,38.3446426,0 79.920893,37.1110359,0 80.59898595000001,38.8266112,0 81.2770789,40.5421865,0 80.6515452,41.5820683,0 80.2581875,41.1686701,0</coordinates></LineString></Placemark>
+<Placemark><name>阿和沙漠公路(阿拉尔-和田)</name><styleUrl>#pin_desert</styleUrl><description>阿和沙漠公路 G580 中点 (阿拉尔 40.54,81.28 -&gt; 和田 37.11,79.92)</description><Point><coordinates>80.59898595000001,38.8266112,0</coordinates></Point></Placemark>
+</Document></kml>
